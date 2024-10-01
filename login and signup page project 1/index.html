@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Signup</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-container">
+    <!-- Login Section -->
+    <div class="form-box login">
+      <h2>Login</h2>
+      <form onsubmit="return validateLogin()">
+        <input type="text" id="login-email" name="email" placeholder="Enter your email" required>
+        <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+        <button type="submit">Login</button>
+        <div class="error-message" id="login-error"></div>
+      </form>
+      <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+    </div>
+
+    <!-- Signup Section -->
+    <div class="form-box signup">
+      <h2>Signup</h2>
+      <form onsubmit="return validateSignup()">
+        <input type="text" id="signup-name" name="name" placeholder="Enter your name" required>
+        <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+        <input type="password" id="signup-password" name="password" placeholder="Enter your password" required>
+        <button type="submit">Sign Up</button>
+        <div class="error-message" id="signup-error"></div>
+      </form>
+      <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
